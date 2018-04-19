@@ -53,4 +53,12 @@ $(document).ready(function() {
         return false;
     });
 
+    //show more - show slowly 
+
+    $(".showslow").click(function() {
+        $("#myDIV").toggle('slow');
+    });
+
+
+
 });

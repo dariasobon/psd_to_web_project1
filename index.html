@@ -75,24 +75,47 @@
             </div>
         </div>
     </section>
-    <div class="quote">
-        <div class="qoute-img">
-            <img src="images/openQ.png" alt="">
-        </div>
-        <div class="wrapper">
-            <a class="left-arrow" href="#">
-                <img src="images/arrow-left.png" alt="left arrow">
-            </a>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, std do eiusmod tempor incididunt ut labore tet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex. </p>
-            </div>
-            <a class="right-arrow" href="#">
-                <img src="images/arrow-right.png" alt="right arrow">
-            </a>
-        </div>
-        <div class="qoute-img">
-            <img src="images/closeQ.png" alt="">
-        </div>
+    <div class="quote-wrapper" id="carousel">
+        <ul>
+            <li>
+                <div class="quote">
+                    <div class="qoute-img">
+                        <img src="images/openQ.png" alt="">
+                    </div>
+                    <div class="wrapper">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, std do eiusmod tempor incididunt ut labore tet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex. </p>
+                        </div>
+                    </div>
+                    <div class="qoute-img">
+                        <img src="images/closeQ.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="quote">
+                    <div class="qoute-img">
+                        <img src="images/openQ.png" alt="">
+                    </div>
+                    <div class="wrapper">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, std do eiusmod tempor incididunt ut labore tet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex. </p>
+                        </div>
+                    </div>
+                    <div class="qoute-img">
+                        <img src="images/closeQ.png" alt="">
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ol id="pagination">
+        </ol>
+        <a class="left-arrow" href="#" id="prev">
+            <img src="images/arrow-left.png" alt="left arrow">
+        </a>
+        <a class="right-arrow" href="#" id="next">
+            <img src="images/arrow-right.png" alt="right arrow">
+        </a>
     </div>
     <section id="prices" class="prices">
         <div class="container">
@@ -288,8 +311,44 @@
             </div>
             <div class="center">
                 <p>show more</p>
-                <a href="#"><img src="images/arrow_down_red.png" alt="arrow"></a>
+                <button onclick="myFunction()" class="showslow"><img src="images/arrow_down_red.png" alt="arrow"></button>
             </div>
+            <div id="myDIV">
+                <div class="gallery row wrap">
+                    <div class="photo">
+                    <div class="image">
+                        <img src="images/img3.png" alt="img3">
+                        <div class="search-ico"></div>
+                    </div>
+                    <div class="description">
+                        <h4>lorem ipsuma dolor sit</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+                </div>
+                <div class="photo">
+                    <div class="image">
+                        <img src="images/img4.png" alt="img4">
+                        <div class="search-ico"></div>
+                    </div>
+                    <div class="description">
+                        <h4>lorem ipsuma dolor sit</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+                </div>
+                
+                <div class="photo">
+                    <div class="image">
+                        <img src="images/img6.png" alt="img6">
+                        <div class="search-ico"></div>
+                    </div>
+                    <div class="description">
+                        <h4>lorem ipsuma dolor sit</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
         </div>
     </section>
     <section class="banner">
@@ -325,6 +384,7 @@
         </div>
     </footer>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/carousel.js"></script>
 </body>
 
 </html>

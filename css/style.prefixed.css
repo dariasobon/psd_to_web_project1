@@ -23,6 +23,7 @@ body {
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 .wrap {
@@ -250,7 +251,7 @@ header #mobile-menu:checked + ul {
   transform: scale(1.1);
 }
 
-.quote {
+.quote-wrapper {
   background: url("../images/background2.png") #000;
   background-position: center;
   display: -ms-flexbox;
@@ -262,38 +263,75 @@ header #mobile-menu:checked + ul {
   height: 500px;
 }
 
-.quote .qoute-img {
+.quote-wrapper .qoute-img {
   width: 100%;
   text-align: center;
   padding: 10px 0;
 }
 
-.quote .wrapper {
+.quote-wrapper .wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
 }
 
-.quote .wrapper .content {
+.quote-wrapper .wrapper .content {
   -ms-flex: 1 1 80%;
       flex: 1 1 80%;
 }
 
-.quote .wrapper .left-arrow,
-.quote .wrapper .right-arrow {
+.quote-wrapper .left-arrow,
+.quote-wrapper .right-arrow {
   -ms-flex: 1;
       flex: 1;
   text-align: center;
 }
 
-.quote p {
+.quote-wrapper p {
   padding: 4% 7%;
   text-align: center;
   color: white;
   font-size: 22px;
   width: 60%;
   margin: 0 auto;
+}
+
+#carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+#carousel ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  list-style-type: none;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#carousel ul li {
+  -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
+}
+
+#carousel #next,
+#carousel #prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#carousel #prev {
+  left: 15px;
+}
+
+#carousel #next {
+  right: 15px;
 }
 
 .angles {
@@ -470,6 +508,10 @@ header #mobile-menu:checked + ul {
   margin: 0 20%;
 }
 
+.gallery #myDIV {
+  display: none;
+}
+
 .gallery .photo {
   padding: 30px 20px 0 20px;
   width: 33.33337%;
@@ -488,18 +530,6 @@ header #mobile-menu:checked + ul {
   margin-right: 0;
 }
 
-/*.photo h5,
-.photo p {
-color: #5a5a5a;
-font: 300 15px/30px Lato;
-padding: 0 28px;
-}
-
-.photo h5 {
-margin: 15px 0;
-font-weight: 700;
-text-transform: uppercase;
-} */
 .image {
   position: relative;
   overflow: hidden;
@@ -621,11 +651,13 @@ footer .info span {
     position: absolute;
     right: 50%;
     transform: translateX(50%);
+    width: 50%;
   }
   header ul li {
     display: block;
     text-align: center;
     line-height: 25px;
+    border-bottom: 1px dashed #e5185b;
   }
   header .mobile-menu {
     display: block;
@@ -651,6 +683,9 @@ footer .info span {
   #services .circles .circle {
     width: 50%;
   }
+  .quote .wrapper .content p {
+    width: 100%;
+  }
   .prices .price {
     margin-bottom: 20px;
   }
@@ -664,6 +699,14 @@ footer .info span {
   }
   .gallery .wrap .photo {
     width: 50%;
+  }
+  .gallery #myDIV .gallery {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
   }
   #contact img {
     display: none;
@@ -698,6 +741,12 @@ footer .info span {
   }
   .gallery .wrap .photo {
     width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .header-content {
+    margin-top: 40px;
   }
 }
 /*# sourceMappingURL=style.prefixed.css.map */
