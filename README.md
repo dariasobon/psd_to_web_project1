@@ -1,3 +1,5 @@
+NOT DONE
+
 Practice project of cutting a PSD template into HTML.
 
 Preview of the final product: https://dariasobon.github.io/psd_to_web_project1/
